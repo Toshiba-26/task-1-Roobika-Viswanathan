@@ -7,22 +7,20 @@ mkdir SECE
 # Enter SECE directory
 cd SECE
 
-# Create sample C code
-cat > sample.c << EOF
-#include <stdio.h>
-
-int main() {
-    printf("Hello SECE!\n");
-    return 0;
-}
-EOF
-
 # Create demo.txt
 touch demo.txt
 
 # Give execute permission to demo.txt
 chmod +x demo.txt
 
+nano sample.c
+# Create sample C code
+
+#include <stdio.h>
+int main() {
+    printf("Hello SECE!\n");
+    return 0;
+}
 # Compile the C program
 gcc sample.c -o sample
 
